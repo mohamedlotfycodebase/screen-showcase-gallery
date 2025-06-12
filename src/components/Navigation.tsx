@@ -16,30 +16,33 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50" dir="rtl">
+    <nav className="bg-white shadow-sm sticky top-0 z-50" dir="rtl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">م</span>
+              <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-sm">م</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">مركز البحوث</span>
+              <span className="text-lg font-bold text-gray-900">مركز البحوث البيئية</span>
             </Link>
           </div>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -50,6 +53,7 @@ const Navigation = () => {
           </div>
         </div>
 
+        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
@@ -58,7 +62,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600"
                 >
                   {item.name}
                 </Link>
