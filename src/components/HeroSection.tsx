@@ -30,11 +30,11 @@ const HeroSection = () => {
           {/* Image/Visual Content */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-8 border-white/20 shadow-2xl">
+              <div className="w-96 h-96 lg:w-[450px] lg:h-[450px] overflow-hidden shadow-2xl rounded-lg">
                 <img
-                  src="/lovable-uploads/642ae71d-dd31-407f-90db-3832ac8ce54d.png"
+                  src="/lovable-uploads/48b50aa9-9206-4557-b149-eacb60348bbd.png"
                   alt="البيئة والاستدامة"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               {/* 2030 Badge */}

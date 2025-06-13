@@ -21,13 +21,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3 space-x-reverse">
+            <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/cf6ff528-464f-49e3-9737-e10f5c6ac5ba.png" 
-                alt="شعار مركز البحوث البيئية" 
-                className="w-12 h-12"
+                src="/lovable-uploads/edc0689d-4e58-4ced-8d47-33741ed5658c.png" 
+                alt="Logo" 
+                className="h-16 w-auto object-contain"
               />
-              <span className="text-xl font-bold text-gray-900">مركز البحوث البيئية</span>
             </Link>
           </div>
 

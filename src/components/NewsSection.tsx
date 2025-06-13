@@ -1,22 +1,26 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const NewsSection = () => {
   const news = [
     {
+      id: 1,
       title: 'إطلاق مشروع جديد للطاقة المتجددة',
       date: '15 مارس 2024',
       excerpt: 'أعلنت الشركة عن إطلاق مشروع جديد للطاقة الشمسية...',
       image: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=400&h=250&fit=crop'
     },
     {
+      id: 2,
       title: 'توقيع اتفاقية شراكة استراتيجية',
       date: '12 مارس 2024',
       excerpt: 'وقعت الشركة اتفاقية شراكة مع إحدى الجهات الحكومية...',
       image: 'https://images.unsplash.com/photo-1569163139723-de8aa0a48c7a?w=400&h=250&fit=crop'
     },
     {
+      id: 3,
       title: 'جائزة التميز البيئي لعام 2024',
       date: '10 مارس 2024',
       excerpt: 'حصلت الشركة على جائزة التميز البيئي تقديراً لجهودها...',
@@ -37,21 +41,23 @@ const NewsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {news.map((article, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-48 object-cover"
-                />
-              </CardContent>
-              <CardHeader>
-                <div className="text-sm text-gray-500 mb-2">{article.date}</div>
-                <CardTitle className="text-lg">{article.title}</CardTitle>
-                <p className="text-gray-600">{article.excerpt}</p>
-              </CardHeader>
-            </Card>
+          {news.map((article) => (
+            <Link key={article.id} to={`/news/${article.id}`}>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-0">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
+                  />
+                </CardContent>
+                <CardHeader>
+                  <div className="text-sm text-gray-500 mb-2">{article.date}</div>
+                  <CardTitle className="text-lg">{article.title}</CardTitle>
+                  <p className="text-gray-600">{article.excerpt}</p>
+                </CardHeader>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,20 +1,24 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const projects = [
     {
+      id: 1,
       title: 'مشروع الطاقة المتجددة',
       description: 'تطوير حلول الطاقة النظيفة',
       image: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=400&h=300&fit=crop'
     },
     {
+      id: 2,
       title: 'إدارة النفايات الذكية',
       description: 'نظام متطور لإدارة النفايات',
       image: 'https://images.unsplash.com/photo-1569163139723-de8aa0a48c7a?w=400&h=300&fit=crop'
     },
     {
+      id: 3,
       title: 'حماية البيئة البحرية',
       description: 'مشاريع حماية النظم البيئية البحرية',
       image: 'https://images.unsplash.com/photo-1574263867128-a3d5c1b1decc?w=400&h=300&fit=crop'
@@ -34,22 +38,24 @@ const ProjectsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600">{project.description}</p>
-                </div>
-              </CardContent>
-            </Card>
+          {projects.map((project) => (
+            <Link key={project.id} to={`/projects/${project.id}`}>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-0">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600">{project.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
