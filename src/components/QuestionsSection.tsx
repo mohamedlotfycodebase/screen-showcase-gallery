@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const QuestionsSection = () => {
   const questions = [
@@ -15,6 +15,14 @@ const QuestionsSection = () => {
     {
       question: 'هل تقدمون خدمات للقطاع الخاص؟',
       answer: 'نعم، نقدم خدماتنا لكل من القطاع الحكومي والخاص والمؤسسات غير الربحية.'
+    },
+    {
+      question: 'ما هي مدة تنفيذ المشاريع؟',
+      answer: 'تختلف مدة التنفيذ حسب حجم ونوع المشروع، لكننا نلتزم بالمواعيد المتفق عليها مع العملاء.'
+    },
+    {
+      question: 'هل تقدمون استشارات مجانية؟',
+      answer: 'نعم، نقدم استشارة أولية مجانية لتقييم احتياجاتكم وتقديم الحلول المناسبة.'
     }
   ];
 
@@ -23,26 +31,26 @@ const QuestionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            الأسئلة
+            الأسئلة الشائعة
           </h2>
           <p className="text-xl text-gray-600">
             الأسئلة الشائعة وإجاباتها
           </p>
         </div>
 
-        <div className="space-y-6">
-          {questions.map((item, index) => (
-            <Card key={index} className="hover:shadow-md transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-lg text-teal-600">
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="w-full">
+            {questions.map((item, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                <AccordionTrigger className="text-right hover:no-underline text-lg font-semibold text-gray-900 py-6">
                   {item.question}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{item.answer}</p>
-              </CardContent>
-            </Card>
-          ))}
+                </AccordionTrigger>
+                <AccordionContent className="text-right text-gray-600 pb-6 text-base leading-relaxed">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

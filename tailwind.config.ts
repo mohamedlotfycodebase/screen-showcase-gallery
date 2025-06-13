@@ -19,7 +19,19 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'helvetica': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+				'cairo': ['Cairo', 'Arial', 'sans-serif'],
+			},
+			fontSize: {
+				'xs': ['14px', { lineHeight: '1.4' }],
+				'sm': ['16px', { lineHeight: '1.5' }],
+				'base': ['18px', { lineHeight: '1.6' }],
+				'lg': ['20px', { lineHeight: '1.6' }],
+				'xl': ['24px', { lineHeight: '1.6' }],
+				'2xl': ['30px', { lineHeight: '1.5' }],
+				'3xl': ['36px', { lineHeight: '1.4' }],
+				'4xl': ['48px', { lineHeight: '1.3' }],
+				'5xl': ['60px', { lineHeight: '1.2' }],
+				'6xl': ['72px', { lineHeight: '1.1' }],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

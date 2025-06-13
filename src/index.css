@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -79,11 +80,11 @@
 
 @layer base {
   * {
-    @apply border-border font-helvetica;
+    @apply border-border font-cairo;
   }
 
   body {
-    @apply bg-background text-foreground font-helvetica;
+    @apply bg-background text-foreground font-cairo text-base;
   }
 }
 
