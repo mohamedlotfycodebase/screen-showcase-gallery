@@ -18,14 +18,16 @@ const Navigation = () => {
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50" dir="rtl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">م</span>
-              </div>
-              <span className="text-lg font-bold text-gray-900">مركز البحوث البيئية</span>
+            <Link to="/" className="flex items-center space-x-3 space-x-reverse">
+              <img 
+                src="/lovable-uploads/cf6ff528-464f-49e3-9737-e10f5c6ac5ba.png" 
+                alt="شعار مركز البحوث البيئية" 
+                className="w-12 h-12"
+              />
+              <span className="text-xl font-bold text-gray-900">مركز البحوث البيئية</span>
             </Link>
           </div>
 
@@ -35,7 +37,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>

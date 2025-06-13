@@ -3,24 +3,26 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-teal-800 text-white py-16">
+    <footer className="bg-teal-800 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center space-x-2 space-x-reverse mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-teal-800 font-bold text-lg">م</span>
-              </div>
-              <span className="text-xl font-bold">مركز البحوث</span>
+            <div className="flex items-center space-x-3 space-x-reverse mb-6">
+              <img 
+                src="/lovable-uploads/cf6ff528-464f-49e3-9737-e10f5c6ac5ba.png" 
+                alt="شعار مركز البحوث البيئية" 
+                className="w-12 h-12 bg-white p-2 rounded-full"
+              />
+              <span className="text-2xl font-bold">مركز البحوث</span>
             </div>
-            <p className="text-teal-200 mb-4">
+            <p className="text-teal-200 mb-6 text-lg leading-relaxed">
               نحن نقدم خدمات استشارية متخصصة في مجال البيئة والتنمية المستدامة
             </p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">الخدمات</h4>
-            <ul className="space-y-2 text-teal-200">
+            <h4 className="text-xl font-semibold mb-6">الخدمات</h4>
+            <ul className="space-y-3 text-teal-200 text-lg">
               <li>الاستشارات البيئية</li>
               <li>تقييم الأثر البيئي</li>
               <li>إدارة النفايات</li>
@@ -29,8 +31,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">الشركة</h4>
-            <ul className="space-y-2 text-teal-200">
+            <h4 className="text-xl font-semibold mb-6">الشركة</h4>
+            <ul className="space-y-3 text-teal-200 text-lg">
               <li>من نحن</li>
               <li>المشاريع</li>
               <li>الأخبار</li>
@@ -39,8 +41,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">معلومات التواصل</h4>
-            <div className="space-y-3 text-teal-200">
+            <h4 className="text-xl font-semibold mb-6">معلومات التواصل</h4>
+            <div className="space-y-4 text-teal-200 text-lg">
               <p>123 شارع البيئة</p>
               <p>الرياض، المملكة العربية السعودية</p>
               <p>هاتف: 123-4567-890</p>
@@ -49,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-teal-700 mt-12 pt-8 text-center text-teal-200">
+        <div className="border-t border-teal-700 mt-16 pt-10 text-center text-teal-200 text-lg">
           <p>&copy; 2024 مركز البحوث البيئية. جميع الحقوق محفوظة.</p>
         </div>
       </div>
